@@ -1,8 +1,8 @@
 <?php 
-    $title='';
+    session_start();
+    $title='Connexion';
     $description='';
 ?>
-<!DOCTYPE html>
 <?php include_once('layouts/header.php');?>
 <main>
     <h1>Connexion</h1>
@@ -16,7 +16,8 @@
             <input type="password" name="password" id="password">
         </div>
         <div class="error">
-            <?php if(isset($_SESSION['error'])){
+            <?php 
+            if(isset($_SESSION['error'])){
                 echo $_SESSION['error'];
                 unset($_SESSION['error']);
             } 

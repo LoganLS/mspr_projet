@@ -2,7 +2,7 @@
     define("DBHOST", "localhost"); 
     define("DBUSER", "root");
     define("DBPASS", "");
-    define("DBNAME", "mspr_evenements_musique");
+    define("DBNAME", "mspr");
  
     try {
         //connexion à la base avec la classe PDO et le dsn
