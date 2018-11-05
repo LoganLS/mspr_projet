@@ -8,12 +8,13 @@
             <nav>
                 <ul>
                     <li>Nom du site</li>
+                    <li><a href="./index.php">Accueil</a></li>
+                    <li><a href="./events_list">Évenements</a></li>
                     <?php if(empty($_SESSION['id'])){ ?>
                         <li><a href="./login.php">Connexion</a></li>
                         <li><a href="./register.php">Inscription</a></li>
                     <?php }else{ ?>
-                        <li>Profil</li>
-                        <li>Évenements</li>
+                        <li><a href="./profil.php">Profil</a></li>
                         <li><a href="./logout.php">Déconnexion</a></li>
                     <?php } ?>
                 </ul>

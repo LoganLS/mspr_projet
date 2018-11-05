@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-    $title='';
+    $title='Inscription';
     $description='';
 ?>
 <?php include_once('layouts/header.php');?>
