@@ -10,7 +10,7 @@
     if(!empty($_SESSION['id'])){ ?>
         <button id="ajouter_evenement">Ajouter événement</button>
     <?php } ?>
-    
+
     <div id='calendar-container'>
         <div id='calendar'></div>
     </div>
