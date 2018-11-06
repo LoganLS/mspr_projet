@@ -66,11 +66,18 @@ $sql="SELECT name
  ?>
 
 <table class="table table-bordered table-striped">
+<<<<<<< HEAD
 
 <tbody>
   <tr>
     <td>Évènement où je participe</td>
   </tr>
+=======
+<tbody>
+    <tr>
+  <td>Évènement où je participe</td>
+</tr>
+>>>>>>> master
 <?php foreach($events as $event){ ?>
 <tr>
 <td><?php echo $event->name; ?></td>
