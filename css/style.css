@@ -1,0 +1,16 @@
+#calendar{
+    max-width:900px;
+    margin:0 auto;
+}
+
+#gauche{
+    float:left;
+}
+
+#droite{
+    float:right;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #789BFF !important;
+}

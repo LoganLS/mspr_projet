@@ -1,9 +1,0 @@
-#calendar {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #789BFF !important;
-}
