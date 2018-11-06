@@ -17,6 +17,12 @@
                     <li>RythmEvent</li>
                     <li><a href="./index.php">Accueil</a></li>
                     <li><a href="./events_list.php">Évenements</a></li>
+                    <?php 
+                        if(!empty($_SESSION['role'])){
+                            if($_SESSION['role']==='administrateur'){ ?>
+                            <li><a href="./validation_event.php">Espace administrateur</a></li>
+                    <?php }
+                        } ?>
                     <?php if(empty($_SESSION['id'])){ ?>
                         <li><a href="./login.php">Connexion</a></li>
                         <li><a href="./register.php">Inscription</a></li>

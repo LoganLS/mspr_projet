@@ -52,11 +52,11 @@ if (!empty($_POST['event_name']) and !empty($_POST['date_start']) and !empty($_P
         $stmt->bindValue(':street_address',$street);
         $stmt->bindValue(':description',$description);
         $stmt->bindValue(':limited_number_participant',$limited_number_participants);
-        $stmt->bindValue(':picture',basename($picture['name']));
+        $stmt->bindValue(':picture',$event_name.' '.basename($picture['name']));
         $stmt->execute();
 
         //Enregistrement de l'image dans le dossier images
-        move_uploaded_file($_FILES['picture']['tmp_name'],'../images/'.$event_name.'_'.basename($_FILES['picture']['name']));
+        move_uploaded_file($_FILES['picture']['tmp_name'],'../images/'.$event_name.' '.basename($_FILES['picture']['name']));
     }
 }else{
     $_SESSION['error']="Veuillez saisir tous les champs !";

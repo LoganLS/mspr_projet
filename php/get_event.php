@@ -3,7 +3,7 @@ include_once('db.php');
 
 //Récupération du détail de l'événement
 $sql="SELECT * FROM events 
-        WHERE id=:id_event";
+        WHERE id=:id_event AND is_published=1";
 $stmt=$conn->prepare($sql);
 $stmt->bindValue(':id_event',$_GET['id']);
 $stmt->execute();
@@ -16,14 +16,6 @@ $stmt=$conn->prepare($sql);
 $stmt->bindValue(':id_user',$detail_evenement->id_user);
 $stmt->execute();
 $createur_evenement=$stmt->fetch();
-
-//Récupération des commentaires
-$sql="SELECT id,id_user,body,date_created FROM comments 
-        WHERE id_event=:id_event";
-$stmt=$conn->prepare($sql);
-$stmt->bindValue('id_event',$_GET['id']);
-$stmt->execute();
-$liste_all_commentaires=$stmt->fetchAll();
 
 //Récupération du nombre de participants
 $sql="SELECT COUNT(*) as nb_participants FROM participants 
@@ -53,6 +45,7 @@ if(!empty($_SESSION['id'])){
     $est_participant=$stmt->rowCount();
 }
 
+//Récupération des commentaires
 $sql="SELECT first_name,last_name,body,c.date_created FROM users u INNER JOIN comments c
         WHERE id_event=:id_event";
 $stmt=$conn->prepare($sql);
