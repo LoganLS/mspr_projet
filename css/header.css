@@ -1,0 +1,14 @@
+#gauche{
+  float: left;
+  margin-left: 100px;
+  padding-top: 50px;
+  width: 100px;
+
+}
+
+#droite{
+  padding-left: 900px;
+  margin-left: 450px;
+  padding-top: 50px;
+  width: 60%;
+}
