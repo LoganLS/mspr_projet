@@ -2,6 +2,8 @@
 	session_start();
     $title='Liste événements';
     $description='';
+
+    include_once('php/get_all_events_published.php');
 ?>
 <?php include_once('layouts/header.php');?>
 <main>

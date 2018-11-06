@@ -45,10 +45,18 @@ $participants=$stmt->fetchAll();
 
 //Savoir si le membre est un participant
 if(!empty($_SESSION['id'])){
-    $sql="SELECT id_users FROM participants WHERE id_users=:id_user";
+    $sql="SELECT id_users FROM participants WHERE id_users=:id_user AND id_event=:id_event";
     $stmt=$conn->prepare($sql);
     $stmt->bindValue(':id_user',$_SESSION['id']);
+    $stmt->bindValue(':id_event',$_GET['id']);
     $stmt->execute();
     $est_participant=$stmt->rowCount();
 }
+
+$sql="SELECT first_name,last_name,body,c.date_created FROM users u INNER JOIN comments c
+        WHERE id_event=:id_event";
+$stmt=$conn->prepare($sql);
+$stmt->bindValue(':id_event',$_GET['id']);
+$stmt->execute();
+$commentaires=$stmt->fetchAll();
 ?>

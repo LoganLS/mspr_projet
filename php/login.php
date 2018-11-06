@@ -23,6 +23,7 @@ if (!empty($_POST['email']) and !empty($_POST['password'])){
         if ($password===$member->password){
             //on connecte le member
             $_SESSION['id'] = $member->id;
+            $_SESSION['role'] = $member->role;
         }
         else {
             $_SESSION['error'] = "Le mot de passe est incorrect !";

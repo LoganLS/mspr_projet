@@ -55,6 +55,7 @@ if (!empty($_POST['last_name']) and !empty($_POST['first_name']) and !empty($_PO
             $stmt->execute();
             //Création de la variable de session : id
             $_SESSION['id']=$conn->lastInsertId();
+            $_SESSION['role']='utilisateur';
         }
     }
 }else{

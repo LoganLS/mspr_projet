@@ -19,7 +19,7 @@ include_once('layouts/header.php');?>
                 <button onclick="location.href='php/annuler_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Annuler participation</button>
             <?php }
         }else{
-            echo '<div>Vous devez être connectés pour pouvoir participer à l\événement !</div>';
+            echo '<div>Vous devez être connectés pour pouvoir participer à l\'événement !</div>';
         } ?>
         
         <div>
@@ -27,7 +27,7 @@ include_once('layouts/header.php');?>
             <p><?php echo $detail_evenement->description;?></p>
         </div>
         
-        <?php if($createur_evenement->id===$_SESSION['id']){ ?>
+        <?php if($createur_evenement->id===$_SESSION['id'] || $_SESSION['role']==="Administrateur"){ ?>
             <button onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer</button>
         <?php } ?>
     </div>
@@ -54,6 +54,21 @@ include_once('layouts/header.php');?>
         </table>
     <?php } ?>
     <h2>Espace commentaires</h2>
+    <?php 
+    if(!empty($_SESSION['id'])){ ?>
+        <form method="post">
+            <textarea placeholder="Votre commentaire ..."></textarea>
+        </form>
+    <?php } 
+    //Liste de tous les commentaires existants pour cet événement
+    foreach($commentaires as $commentaire){ ?>
+        <div>
+            <p>Posté par <?php echo $commentaire->first_name.' '.$commentaire->last_name; ?></p>
+            <p>Le : <?php echo $commentaire->date_created;?></p>
+            <p><?php echo $commentaire->body;?></p>
+        </div>
+    <?php } ?>
+    
     <?php    
     /*
         Si adminsitrateur ou créateur de l'event : bouton supprimer. (!empty $_session)
