@@ -7,8 +7,22 @@
 ?>
 <?php include_once('layouts/header.php');?>
 <main>
-    <div id='calendar-container'>
-        <div id='calendar'></div>
-    </div>
+
 </main>
 <?php include_once('layouts/footer.php');?>
+
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/scss/accueil.css">
+  </head>
+  <body>
+    
+    <h1>EVENEMENTS NANTES</h1>
+
+
+  </body>
+</html>
