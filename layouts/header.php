@@ -14,7 +14,7 @@
                         <li><a href="./login.php">Connexion</a></li>
                         <li><a href="./register.php">Inscription</a></li>
                     <?php }else{ ?>
-                        <li><a href="./profil.php">Profil</a></li>
+                        <li><a href="./profil.php?id=<?php echo $_SESSION['id'];?>">Profil</a></li>
                         <li><a href="./logout.php">Déconnexion</a></li>
                     <?php } ?>
                 </ul>
