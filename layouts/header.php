@@ -7,8 +7,8 @@
         <header>
 
           <div class="img_header">
-            <img src="logo.png" alt="logo du site">
-            <img id="element" src="elementsgraphique.png" alt="elements graphique">
+            <img id="gauche" src="logo.png" alt="logo du site">
+            <img id="droite" src="elementsgraphique.png" alt="elements graphique">
           </div>
 
             <nav>

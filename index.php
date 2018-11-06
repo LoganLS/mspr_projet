@@ -17,11 +17,12 @@
   <head>
     <meta charset="utf-8">
     <title>Accueil</title>
-    <link rel="stylesheet" href="/scss/accueil.css">
+    <link rel="stylesheet" href="/css/accueil.css">
   </head>
   <body>
-    
+
     <h1>EVENEMENTS NANTES</h1>
+    <h2>Spectacles, concerts, festivals et sorties</h2>
 
 
   </body>
