@@ -7,6 +7,7 @@ $(document).ready(function(){
             right: 'month,basicWeek,basicDay'
         },
         columnFormat:'dddd',
+        themeSystem:'bootstrap4',
         events:'./json/all_events_published.json'
     });
 });

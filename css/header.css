@@ -1,14 +1,14 @@
-#gauche{
-  float: left;
-  margin-left: 100px;
-  padding-top: 50px;
-  width: 100px;
+.img_header{
+    display: flex;
+    align-items: bottom;
+    justify-content: space-between;
+    margin:0 10%;
+}
 
+#gauche{
+    max-width: 50%;
 }
 
 #droite{
-  padding-left: 900px;
-  margin-left: 450px;
-  padding-top: 50px;
-  width: 60%;
+    max-width: 50%;
 }

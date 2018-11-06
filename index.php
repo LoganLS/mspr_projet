@@ -16,13 +16,17 @@
 ?>
 <?php include_once('layouts/header.php');?>
 <main>
-    <h1>EVENEMENTS NANTES</h1>
-    <h2>Spectacles, concerts, festivals et sorties</h2>
-    <?php
-    foreach ($evenements as $evenement) { ?>
-    <img src="images/<?php echo $evenement->picture; ?>" alt="" id="<?php echo $evenement->name; ?>" onclick="location.href='event_detail.php?id=<?php echo $evenement->id; ?>'">
-
-    <?php } ?>
+    <h1 id="h1_accueil">EVENEMENTS NANTES</h1>
+    <h2 id="h2_accueil">Spectacles, concerts, festivals et sorties</h2>
+    <div id="bloc_parent_images_accueil">
+        <?php
+        foreach ($evenements as $evenement) { ?>
+            <div class="bloc_images_accueil">
+                <img src="images/<?php echo $evenement->picture; ?>" alt="" onclick="location.href='event_detail.php?id=<?php echo $evenement->id; ?>'">
+                <p><?php echo $evenement->name;?></p>
+            </div>
+        <?php } ?>
+    </div>
 </main>
 <?php include_once('layouts/footer.php');?>
 

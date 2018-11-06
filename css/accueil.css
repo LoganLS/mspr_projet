@@ -1,9 +1,44 @@
-h1{
+#h1_accueil{
   text-align: center;
   text-decoration: underline;
 }
 
-h2{
+#h2_accueil{
   text-align: center;
-  
+    margin:20px 0 60px 0;
+}
+
+#bloc_parent_images_accueil{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloc_images_accueil{
+    position:relative;
+    width:30%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloc_images_accueil img{
+    width:50%;
+    margin:0 auto;
+}
+
+.bloc_images_accueil p{
+    position:absolute;
+    font-size:30px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+/* Au départ, on n'affiche pas le nom de l'événement sur les images de la page d'accueil*/
+.bloc_images_accueil p{
+    visibility: hidden;
 }
