@@ -1,0 +1,13 @@
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+#gauche{
+  float: left;
+}
+
+#droite{
+  float: right;
+}
