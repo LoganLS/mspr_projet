@@ -1,0 +1,9 @@
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.img_header{
+  display: flex;
+  margin-left:100px;
+}

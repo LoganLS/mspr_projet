@@ -5,9 +5,15 @@
     </head>
     <body>
         <header>
+
+          <div class="img_header">
+            <img src="logo.png" alt="logo du site">
+            <img id="element" src="elementsgraphique.png" alt="elements graphique">
+          </div>
+
             <nav>
                 <ul>
-                    <li>Nom du site</li>
+                    <li>RythmEvent</li>
                     <li><a href="./index.php">Accueil</a></li>
                     <li><a href="./events_list.php">Évenements</a></li>
                     <?php if(empty($_SESSION['id'])){ ?>

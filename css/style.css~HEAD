@@ -1,0 +1,14 @@
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.img_header{
+
+  margin-left:100px;
+width: 100%;
+}
+
+#element{
+  float: right;
+}
