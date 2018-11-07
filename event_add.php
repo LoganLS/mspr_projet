@@ -12,8 +12,6 @@
 <main>
 	<div class="card contenu_page">
 
-    
-
     <h1 class="h2">Ajouter un évènement</h1>
     <strong>Votre événement sera validé par un administrateur avant d'être diffusé sur notre site.</strong>
 
