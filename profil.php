@@ -13,7 +13,7 @@ include("php/db.php");
   <div class="container">
 
 
-    <h1>Espace profil</h1>
+    <h1 class="h2">Espace profil</h1>
 
   <table class="table table-bordered table-striped">
     <tbody>

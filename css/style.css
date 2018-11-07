@@ -3,11 +3,11 @@
     margin: 0 auto;
 }
 
-<<<<<<< Updated upstream
+
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #789BFF !important;
 }
-=======
+
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #789BFF !important;
@@ -17,6 +17,4 @@
   width: 700px;
   margin: 0 auto;
   padding: 20px;
-
 }
->>>>>>> Stashed changes

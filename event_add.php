@@ -11,7 +11,7 @@
 <?php include_once('layouts/header.php');?>
 <main>
 	<div class="card contenu_page">
-    <h1 h4. Bootstrap heading>Ajouter un événement</h1>
+    <h1 class="h2">Ajouter un événement</h1>
 	<form action="php/event_add.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="event_name">Nom de l'évènement</label>
@@ -46,7 +46,7 @@
             <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants">
         </div>
 
-        <h2 h4. Bootstrap heading>Adresse de l'évènement</h2>
+        <h2 class="h2">Adresse de l'évènement</h2>
 
 				<div class="form-group">
 						<label for="city">Ville</label>

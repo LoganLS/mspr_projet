@@ -8,7 +8,7 @@
 
 <div class="card contenu_page">
 
-    <h1 h4. Bootstrap heading>Inscription</h1>
+    <h1 class="h2">Inscription</h1>
 	<form action="php/register.php" method="post">
 
         <div class="form-group">
