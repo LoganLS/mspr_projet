@@ -15,7 +15,7 @@
     $evenements=$stmt->fetchAll();
 ?>
 <?php include_once('layouts/header.php');?>
-<main>
+<main class="container">
     <h1 id="h1_accueil">EVENEMENTS NANTES</h1>
     <h2 id="h2_accueil">Spectacles, concerts, festivals et sorties</h2>
     <div id="bloc_parent_images_accueil">

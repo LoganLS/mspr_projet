@@ -6,7 +6,7 @@
 <?php 
 include_once('php/get_all_events_not_published.php');
 include_once('layouts/header.php');?>
-<main>
+<main class="container">
     <h1>Espace administratif : Validation d'un événement</h1>
     <?php
     if(empty($events)){
