@@ -8,7 +8,12 @@ body{
     height:100%;
 }
 
+main{
+    min-height:71vh;
+}
+
 footer{
     background-color:#789BFF;
-    padding:50px;
+    padding:30px;
+    min-height: 10vh;
 }

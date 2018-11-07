@@ -14,13 +14,10 @@ include("php/db.php");
 
 
     <h1 class="h2">Espace profil</h1>
+      <p id="nom_prenom_profil"><?php echo $member->first_name." ".$member->last_name ?></p>
 
   <table class="table table-bordered table-striped">
     <tbody>
-    <tr>
-      <td>Prénom - Nom</td>
-      <td><?php echo $member->first_name." ".$member->last_name ?></td>
-    </tr>
     <tr>
       <td>Date de naissance</td>
       <td><?php echo date("d-m-Y",strtotime($member->date_birthday)) ?></td>

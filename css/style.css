@@ -26,3 +26,15 @@ main{
 .bloc_images_accueil{
     margin-top:10px;
 }
+<<<<<<< HEAD
+=======
+
+#nom_prenom_profil{
+    font-size:1.5em;
+    font-weight: bold;
+}
+
+#bloc_paragraphes_index{
+    margin-top:50px;
+}
+>>>>>>> master

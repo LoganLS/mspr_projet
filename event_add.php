@@ -11,7 +11,12 @@
 <?php include_once('layouts/header.php');?>
 <main>
 	<div class="card contenu_page">
+<<<<<<< HEAD
     <h1 class="h2">Ajouter un événement</h1>
+=======
+    <h1 class="h2">Ajouter un évènement</h1>
+    <strong>Votre événement sera validé par un administrateur avant d'être diffusé sur notre site.</strong>
+>>>>>>> master
 	<form action="php/event_add.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="event_name">Nom de l'événement</label>
