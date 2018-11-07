@@ -9,8 +9,9 @@ if($_SESSION['role']!=='administrateur'){
 include_once('php/event_detail_not_published.php');
 include_once('layouts/header.php');?>
 <main class="container">
-    <h1>Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
-    <h2>Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
+    <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
+    <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
+    <img class="bloc_center" src="images/<?php echo $detail_evenement->picture;?>">
     <div id="bloc_detail_evenement">
         <div>
             <p>Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' de '.date('d-m-Y',strtotime($detail_evenement->date_start)).' à '.$detail_evenement->hour_start.' jusqu\'au '.date('d-m-Y',strtotime($detail_evenement->date_end)).' '.$detail_evenement->hour_end;?></p>

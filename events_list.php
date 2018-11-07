@@ -24,7 +24,7 @@
 		<ul class="list-group block1">
 			  <li class="list-group-item active">Prochains événements</li>
 			<?php foreach($events as $event) { ?>
-				<li class="list-group-item"> <?php echo $event->name;?> </li>
+                <li class="list-group-item"><a href="event_detail.php?id=<?php echo $event->id;?>"><?php echo $event->name;?></a></li>
 			<?php } ?>
 			<br>
 			<?php

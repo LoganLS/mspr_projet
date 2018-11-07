@@ -26,8 +26,6 @@ main{
 .bloc_images_accueil{
     margin-top:10px;
 }
-<<<<<<< HEAD
-=======
 
 #nom_prenom_profil{
     font-size:1.5em;
@@ -37,4 +35,12 @@ main{
 #bloc_paragraphes_index{
     margin-top:50px;
 }
->>>>>>> master
+
+.bloc_center{
+    display: block;
+    margin:0 auto;
+}
+
+.text_center{
+    text-align: center;
+}

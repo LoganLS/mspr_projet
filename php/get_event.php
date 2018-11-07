@@ -46,7 +46,7 @@ if(!empty($_SESSION['id'])){
 }
 
 //Récupération des commentaires
-$sql="SELECT first_name,last_name,body,c.date_created FROM users u INNER JOIN comments c
+$sql="SELECT first_name,last_name,body,c.date_created FROM users u INNER JOIN comments c ON u.id=c.id_user
         WHERE id_event=:id_event";
 $stmt=$conn->prepare($sql);
 $stmt->bindValue(':id_event',$_GET['id']);

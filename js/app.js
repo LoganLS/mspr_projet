@@ -11,6 +11,7 @@ $(document).ready(function(){
     );
     
     $(".bloc_images_accueil p").hover(function(){
+            $(this).css('cursor','default');
             $(this).css("visibility","visible");
         }, function(){
             $(this).css("visibility","hidden");

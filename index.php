@@ -24,7 +24,7 @@
         foreach ($evenements as $evenement) { ?>
             <div class="bloc_images_accueil">
                 <img src="images/<?php echo $evenement->picture; ?>" alt="" onclick="location.href='event_detail.php?id=<?php echo $evenement->id; ?>'">
-                <p><?php echo $evenement->name;?></p>
+                <p onclick="location.href='event_detail.php?id=<?php echo $evenement->id; ?>'"><?php echo $evenement->name;?></p>
             </div>
         <?php } ?>
     </div>
