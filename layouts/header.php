@@ -12,8 +12,8 @@
                         <img id="image_gauche" src="logo.png" alt="logo du site">
                     </div>
                     <li><a class="nav-item nav-link" href="./index.php">RythmEvent</a></li>
-                    <li><a class="nav-item nav-link" href="./events_list.php">Événements</a></li>
-                    <?php 
+                    <li><a class="nav-item nav-link" href="./events_list.php">Evènements</a></li>
+                    <?php
                         if(!empty($_SESSION['role'])){
                             if($_SESSION['role']==='administrateur'){ ?>
                             <li><a class="nav-item nav-link" href="./validation_event.php">Espace administrateur</a></li>

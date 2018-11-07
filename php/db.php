@@ -1,7 +1,7 @@
 <?php
     define("DBHOST", "localhost:8889");
     define("DBUSER", "root");
-    define("DBPASS", "");
+    define("DBPASS", "root");
     define("DBNAME", "mspr");
 
     try {
