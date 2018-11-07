@@ -22,7 +22,7 @@
 
 <div class="block">
 		<ul class="list-group block1">
-			  <li class="list-group-item active">Prochains Evénements</li>
+			  <li class="list-group-item active">Prochains événements</li>
 			<?php foreach($events as $event) { ?>
 				<li class="list-group-item"> <?php echo $event->name;?> </li>
 			<?php } ?>

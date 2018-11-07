@@ -4,7 +4,7 @@ include_once('db.php');
 die();
 $first_name=$_POST['first_name'];
 $last_name=$_POST['last_name'];
-$email=_$POST['email'];
+$email=$_POST['email'];
 $username=$_POST['username'];
 $date_birthday=$_POST['date_birthday'];
 $password=nd5($_POST['password']);

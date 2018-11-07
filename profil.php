@@ -64,7 +64,7 @@ if(!empty($_SESSION['id'])){
 
 
  ?>
-<button onclick="location.href='modifier_profil.php?id=<?php echo $_SESSION['id']; ?>'" type="button">Modifier mon profil</button>
+<button class="btn btn-outline-dark" onclick="location.href='modifier_profil.php?id=<?php echo $_SESSION['id']; ?>'" type="button">Modifier mon profil</button>
 
 <?php  }
 } ?>

@@ -65,7 +65,7 @@ include("php/db.php");
 
 </div>
 
-<button type="submit" name="button">Modifier</button>
+<button class="btn btn-outline-dark" type="submit" name="button">Modifier</button>
 </form>
 
   </div>
