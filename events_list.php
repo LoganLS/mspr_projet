@@ -6,7 +6,7 @@
     include_once('php/get_all_events_published.php');
 ?>
 <?php include_once('layouts/header.php');?>
-<main>
+<main class="container">
     <?php
     //Si l'utilisateur est connecté, il peut ajouter un événement.
     if(!empty($_SESSION['id'])){ ?>
