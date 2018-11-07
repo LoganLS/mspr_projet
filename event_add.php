@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
     $title='Ajouter un événement';
     $description='';
@@ -10,63 +10,68 @@
 ?>
 <?php include_once('layouts/header.php');?>
 <main>
-    <h1>Ajouter un événement</h1>
+	<div class="card contenu_page">
+    <h1 h4. Bootstrap heading>Ajouter un événement</h1>
 	<form action="php/event_add.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="event_name">Nom événement</label>
-            <input type="text" name="event_name" id="event_name">
+        <div class="form-group">
+            <label for="event_name">Nom de l'évènement</label>
+            <input class="form-control" type="text" name="event_name" id="event_name">
         </div>
-        <div>
-            <label for="date_start">Date début</label>
-            <input type="date" name="date_start" id="date_start">
+        <div class="form-group">
+            <label for="date_start">Date de début</label>
+            <input class="form-control" type="date" name="date_start" id="date_start">
         </div>
-        <div>
-            <label for="hour_start">Heure début</label>
-            <input type="time" name="hour_start" id="hour_start">
+        <div class="form-group">
+            <label for="hour_start">Heure de début</label>
+            <input class="form-control" type="time" name="hour_start" id="hour_start">
         </div>
-        <div>
-            <label for="date_end">Date fin</label>
-            <input type="date" name="date_end" id="date_end">
+        <div class="form-group">
+            <label for="date_end">Date de fin</label>
+            <input class="form-control" type="date" name="date_end" id="date_end">
         </div>
-        <div>
-            <label for="hour_end">Heure fin</label>
-            <input type="time" name="hour_end" id="hour_end">
+        <div class="form-group">
+            <label for="hour_end">Heure de fin</label>
+            <input class="form-control" type="time" name="hour_end" id="hour_end">
         </div>
-        <div>
+        <div class="form-group">
             <label for="picture">Photo</label>
-            <input type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png">
+            <input class="form-control" type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png">
         </div>
-        <div>
+        <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="description" id="description"></textarea>
+            <textarea class="form-control" name="description" id="description"></textarea>
         </div>
-        <div>
-            <label for="limited_number_participants">Nombre limite participants</label>
-            <input type="number" name="limited_number_participants" id="limited_number_participants">
+        <div class="form-group">
+            <label for="limited_number_participants">Nombre limite de participants</label>
+            <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants">
         </div>
-        <h2>Adresse</h2>
-        <div>
+
+        <h2 h4. Bootstrap heading>Adresse de l'évènement</h2>
+
+				<div class="form-group">
+						<label for="city">Ville</label>
+						<input class="form-control" type="text" name="city" id="city">
+				</div>
+        <div class="form-group">
             <label for="zip_code">Code postal</label>
-            <input type="text" name="zip_code" id="zip_code">
+            <input class="form-control" type="text" name="zip_code" id="zip_code">
         </div>
-        <div>
-            <label for="city">Ville</label>
-            <input type="text" name="city" id="city">
-        </div>
-        <div>
+
+        <div class="form-group">
             <label for="street">Rue</label>
-            <input type="text" name="street" id="street">
+            <input class="form-control" type="text" name="street" id="street">
         </div>
         <div class="error">
             <?php if(isset($_SESSION['error'])){
                 echo $_SESSION['error'];
                 unset($_SESSION['error']);
-            } 
+            }
             ?>
         </div>
         <div>
-            <button type="submit">Créer événement</button>
+            <button class="btn btn-outline-dark" type="submit">Créer l'évènement</button>
         </div>
+			</div>
 	</form>
 </main>
 <?php include_once('layouts/footer.php');?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
     $title='Liste événements';
     $description='';
@@ -10,7 +10,7 @@
     <?php
     //Si l'utilisateur est connecté, il peut ajouter un événement.
     if(!empty($_SESSION['id'])){ ?>
-        <button id="ajouter_evenement">Ajouter événement</button>
+        <button id="ajouter_evenement" class="btn btn-outline-dark">Ajouter événement</button>
     <?php } ?>
 
     <div id='calendar-container'>
