@@ -58,6 +58,19 @@ include("php/db.php");
 <?php } ?>
 </tbody>
 </table>
+<?php
+if(!empty($_SESSION['id'])){
+  if($_SESSION['id'] == $_GET['id']){
+
+
+ ?>
+<button onclick="location.href='modifier_profil.php?id=<?php echo $_SESSION['id']; ?>'" type="button">Modifier mon profil</button>
+
+<?php  }
+} ?>
+
+
+
   </div>
 </main>
 
