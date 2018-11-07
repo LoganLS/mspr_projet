@@ -1,6 +1,6 @@
 <?php
 
-$sql="SELECT first_name, last_name, date_birthday, username, email, role, date_created
+$sql="SELECT first_name, last_name, date_birthday, username, email,role, date_created
           FROM users
           WHERE id=:id";
 
