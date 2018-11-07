@@ -17,7 +17,7 @@ if (!empty($_POST['event_name']) and !empty($_POST['date_start']) and !empty($_P
     $zip_code=$_POST["zip_code"];
     $city=$_POST["city"];
     $street=$_POST["street"];
-    
+
     $sql="SELECT name FROM events WHERE name=:event_name";
     $stmt=$conn->prepare($sql);
     $stmt->bindValue(':event_name',$event_name);
@@ -37,28 +37,26 @@ if (!empty($_POST['event_name']) and !empty($_POST['date_start']) and !empty($_P
             $_SESSION['error']="La date de fin doit survenir après le début de la date de l'événement ... !";
         }
 
-        if(empty($_SESSION['error'])){
-            //Requête insertion d'un événement
-            $sql='INSERT INTO events(id_user,name,date_start,hour_start,date_end,hour_end,zip_code,name_city,street_address,description,limited_number_participant,date_created,picture,is_published)
-            VALUES(:id_user,:name,:date_start,:hour_start,:date_end,:hour_end,:zip_code,:name_city,:street_address,:description,:limited_number_participant,NOW(),:picture,0)';
-            $stmt=$conn->prepare($sql);
-            $stmt->bindValue(':id_user',$_SESSION['id']);
-            $stmt->bindValue(':name',$event_name);
-            $stmt->bindValue(':date_start',$date_start);
-            $stmt->bindValue(':hour_start',$hour_start);
-            $stmt->bindValue(':date_end',$date_end);
-            $stmt->bindValue(':hour_end',$hour_end);
-            $stmt->bindValue(':zip_code',$zip_code);
-            $stmt->bindValue(':name_city',$city);
-            $stmt->bindValue(':street_address',$street);
-            $stmt->bindValue(':description',$description);
-            $stmt->bindValue(':limited_number_participant',$limited_number_participants);
-            $stmt->bindValue(':picture',$event_name.' '.basename($picture['name']));
-            $stmt->execute();
+        //Requête insertion d'un événement
+        $sql='INSERT INTO events(id_user,name,date_start,hour_start,date_end,hour_end,zip_code,name_city,street_address,description,limited_number_participant,date_created,picture,is_published)
+        VALUES(:id_user,:name,:date_start,:hour_start,:date_end,:hour_end,:zip_code,:name_city,:street_address,:description,:limited_number_participant,NOW(),:picture,0)';
+        $stmt=$conn->prepare($sql);
+        $stmt->bindValue(':id_user',$_SESSION['id']);
+        $stmt->bindValue(':name',$event_name);
+        $stmt->bindValue(':date_start',$date_start);
+        $stmt->bindValue(':hour_start',$hour_start);
+        $stmt->bindValue(':date_end',$date_end);
+        $stmt->bindValue(':hour_end',$hour_end);
+        $stmt->bindValue(':zip_code',$zip_code);
+        $stmt->bindValue(':name_city',$city);
+        $stmt->bindValue(':street_address',$street);
+        $stmt->bindValue(':description',$description);
+        $stmt->bindValue(':limited_number_participant',$limited_number_participants);
+        $stmt->bindValue(':picture',$event_name.' '.basename($picture['name']));
+        $stmt->execute();
 
-            //Enregistrement de l'image dans le dossier images
-            move_uploaded_file($_FILES['picture']['tmp_name'],'../images/'.$event_name.' '.basename($_FILES['picture']['name']));
-        }
+        //Enregistrement de l'image dans le dossier images
+        move_uploaded_file($_FILES['picture']['tmp_name'],'../images/'.$event_name.' '.basename($_FILES['picture']['name']));
     }
 }else{
     $_SESSION['error']="Veuillez saisir tous les champs !";
