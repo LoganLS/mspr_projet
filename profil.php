@@ -45,13 +45,13 @@ include("php/db.php");
   </table>
 
 <?php include_once('php/get_events_participate.php') ?>
-      
+
 
 <table class="table table-bordered table-striped">
 
 <tbody>
     <tr>
-  <td>Évènement où je participe</td>
+  <td>Événement où je participe</td>
 </tr>
 
 <?php foreach($events as $event){ ?>

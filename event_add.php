@@ -11,10 +11,10 @@
 <?php include_once('layouts/header.php');?>
 <main>
 	<div class="card contenu_page">
-    <h1 class="h2">Ajouter un évènement</h1>
+    <h1 class="h2">Ajouter un événement</h1>
 	<form action="php/event_add.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="event_name">Nom de l'évènement</label>
+            <label for="event_name">Nom de l'événement</label>
             <input class="form-control" type="text" name="event_name" id="event_name">
         </div>
         <div class="form-group">
@@ -46,7 +46,7 @@
             <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants">
         </div>
 
-        <h2 class="h2">Adresse de l'évènement</h2>
+        <h2 class="h2">Adresse de l'événement</h2>
 
 				<div class="form-group">
 						<label for="city">Ville</label>
@@ -69,7 +69,7 @@
             ?>
         </div>
         <div>
-            <button class="btn btn-outline-dark" type="submit">Créer l'évènement</button>
+            <button class="btn btn-outline-dark" type="submit">Créer l'événement</button>
         </div>
 			</div>
 	</form>
