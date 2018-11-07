@@ -1,9 +1,9 @@
-<?php 
+<?php
     session_start();
     $title='Détail événement';
     $description='';
 ?>
-<?php 
+<?php
 include_once('php/get_event.php');
 include_once('layouts/header.php');?>
 <main class="container">
@@ -11,24 +11,24 @@ include_once('layouts/header.php');?>
     <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
     <div id="bloc_detail_evenement" class="row">
         <div class="col-sm-2">
-        <?php 
+        <?php
         if(!empty($_SESSION['id'])){
             //S'il n'est pas un participant, il a accès au bouton participer, sinon il peut annuler sa participation
-            if($est_participant===0){ 
+            if($est_participant===0){
                 //Vérification que le nombre de participants n'a pas atteint sa limite
                 if($nombre_participants!==$detail_evenement->limited_number_participant){ ?>
-                    <button onclick="location.href='php/ajouter_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Participer</button>
+                    <button class="btn btn-outline-dark" onclick="location.href='php/ajouter_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Participer</button>
             <?php }else{ ?>
                         <div>Limite de participants atteinte !</div>
                     <?php }
             }else{ ?>
-                <button onclick="location.href='php/annuler_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Annuler participation</button>
+                <button class="btn btn-outline-dark" onclick="location.href='php/annuler_participation_evenement.php?id_event=<?php echo $_GET['id'];?>'">Annuler participation</button>
             <?php }
         }else{
             echo '<div>Vous devez être connectés pour pouvoir participer à l\'événement !</div>';
         } ?>
         </div>
-        
+
         <div class="col-sm-8 card">
             <p class="card-header">Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' de '.date('d-m-Y',strtotime($detail_evenement->date_start)).' à '.$detail_evenement->hour_start.' jusqu\'au '.date('d-m-Y',strtotime($detail_evenement->date_end)).' '.$detail_evenement->hour_end;?></p>
             <p class="card-body"><?php echo $detail_evenement->description;?></p>
@@ -36,23 +36,23 @@ include_once('layouts/header.php');?>
         <div class="col-sm-2">
         <?php if(!empty($_SESSION['id']) and !empty($_SESSION['role'])){ ?>
             <?php if($createur_evenement->id===$_SESSION['id'] || $_SESSION['role']==="Administrateur"){ ?>
-                <button onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer</button>
-            <?php } 
+                <button class="btn btn-outline-dark" onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer</button>
+            <?php }
         }?>
         </div>
     </div>
-    <p>Nombre limitants de participants : <?php echo $detail_evenement->limited_number_participant;?></p>
+    <p>Nombre limité de participants : <?php echo $detail_evenement->limited_number_participant;?></p>
     <?php if(empty($participants)){
         echo '<div>Aucun participant actuellement.</div>';
     }else{ ?>
         <table>
             <thead>
                 <tr>
-                    <td>Liste participants</td>
+                    <td>Liste des participants</td>
                 </tr>
             </thead>
             <tbody>
-                <?php 
+                <?php
                 foreach($participants as $participant){ ?>
                     <tr>
                         <td><?php echo $participant->last_name;?></td>
@@ -63,14 +63,17 @@ include_once('layouts/header.php');?>
             </tbody>
         </table>
     <?php } ?>
-    <h2>Espace commentaires</h2>
-    <?php 
+    <h2 class="h2">Espace commentaires</h2>
+    <?php
     if(!empty($_SESSION['id'])){ ?>
         <form action="php/ajouter_commentaire.php" method="post">
-            <textarea name="commentaire" placeholder="Votre commentaire ..."></textarea>
-            <button name="bouton_event" value="<?php echo $_GET['id'];?>" type="submit">Envoyer</button>
+          
+           <div class="form-group">
+            <textarea class="form-control" name="commentaire" placeholder="Votre commentaire ..."></textarea>
+          </div>
+            <button class="btn btn-outline-dark"  name="bouton_event" value="<?php echo $_GET['id'];?>" type="submit">Envoyer</button>
         </form>
-    <?php } 
+    <?php }
     //Liste de tous les commentaires existants pour cet événement
     foreach($commentaires as $commentaire){ ?>
         <div>
@@ -79,13 +82,13 @@ include_once('layouts/header.php');?>
             <p><?php echo $commentaire->body;?></p>
         </div>
     <?php } ?>
-    
-    <?php    
+
+    <?php
     /*
         Extension possible : Bouton modifier + popup confirmation
         Extension possible : suppression de son commentaire.
     */
-    
+
     ?>
 </main>
 <?php include_once('layouts/footer.php');?>
