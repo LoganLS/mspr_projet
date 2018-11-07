@@ -7,6 +7,7 @@
     $sql= 'SELECT id, name, picture
     FROM events
     WHERE is_published=1
+    AND date_start>=NOW()
     ORDER BY date_start
     LIMIT 5';
 
