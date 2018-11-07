@@ -4,16 +4,8 @@ include("php/db.php");
     session_start();
     $title='Espace profil';
     $description='';
-    $_GET["id"];
 
-    $sql="SELECT first_name, last_name, date_birthday, username, email, role, date_created
-          FROM users
-          WHERE id=:id";
-
-    $stmt=$conn->prepare($sql);
-    $stmt->bindValue(":id", $_GET["id"]);
-    $stmt->execute();
-    $member = $stmt->fetch();
+    include_once('php/get_informations_user.php');
 
 ?>
 <?php include_once('layouts/header.php');?>
@@ -52,18 +44,8 @@ include("php/db.php");
   </tbody>
   </table>
 
-<?php
-$sql="SELECT name
-      FROM events e
-      INNER JOIN participants p
-      ON e.id=p.id_event
-      WHERE id_users=:id_users";
-
-      $stmt=$conn->prepare($sql);
-      $stmt->bindValue(":id_users", $_GET["id"]);
-      $stmt->execute();
-      $events = $stmt->fetchAll();
- ?>
+<?php include_once('php/get_events_participate.php') ?>
+      
 
 <table class="table table-bordered table-striped">
 
@@ -74,7 +56,7 @@ $sql="SELECT name
 
 <?php foreach($events as $event){ ?>
 <tr>
-<td><?php echo $event->name; ?></td>
+    <td><a href="event_detail.php?id=<?php echo $event->id;?>"><?php echo $event->name; ?></a></td>
 </tr>
 <?php } ?>
 </tbody>

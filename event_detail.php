@@ -6,10 +6,11 @@
 <?php 
 include_once('php/get_event.php');
 include_once('layouts/header.php');?>
-<main>
-    <h1>Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
-    <h2>Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
-    <div id="bloc_detail_evenement">
+<main class="container">
+    <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
+    <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
+    <div id="bloc_detail_evenement" class="row">
+        <div class="col-sm-2">
         <?php 
         if(!empty($_SESSION['id'])){
             //S'il n'est pas un participant, il a accès au bouton participer, sinon il peut annuler sa participation
@@ -26,16 +27,19 @@ include_once('layouts/header.php');?>
         }else{
             echo '<div>Vous devez être connectés pour pouvoir participer à l\'événement !</div>';
         } ?>
-        
-        <div>
-            <p>Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' de '.date('d-m-Y',strtotime($detail_evenement->date_start)).' à '.$detail_evenement->hour_start.' jusqu\'au '.date('d-m-Y',strtotime($detail_evenement->date_end)).' '.$detail_evenement->hour_end;?></p>
-            <p><?php echo $detail_evenement->description;?></p>
         </div>
+        
+        <div class="col-sm-8 card">
+            <p class="card-header">Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' de '.date('d-m-Y',strtotime($detail_evenement->date_start)).' à '.$detail_evenement->hour_start.' jusqu\'au '.date('d-m-Y',strtotime($detail_evenement->date_end)).' '.$detail_evenement->hour_end;?></p>
+            <p class="card-body"><?php echo $detail_evenement->description;?></p>
+        </div>
+        <div class="col-sm-2">
         <?php if(!empty($_SESSION['id']) and !empty($_SESSION['role'])){ ?>
             <?php if($createur_evenement->id===$_SESSION['id'] || $_SESSION['role']==="Administrateur"){ ?>
                 <button onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer</button>
             <?php } 
         }?>
+        </div>
     </div>
     <p>Nombre limitants de participants : <?php echo $detail_evenement->limited_number_participant;?></p>
     <?php if(empty($participants)){
