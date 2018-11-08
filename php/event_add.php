@@ -8,8 +8,6 @@ if (!empty($_POST['event_name']) and !empty($_POST['date_start']) and !empty($_P
 
     $event_name=$_POST["event_name"];
     $date_start=$_POST["date_start"];
-    var_dump($date_start);
-    die();
     $hour_start=$_POST["hour_start"];
     $date_end=$_POST["date_end"];
     $hour_end=$_POST["hour_end"];

@@ -6,7 +6,7 @@
 <?php
 include_once('php/get_event.php');
 include_once('layouts/header.php');?>
-<main class="container">
+<main class="container" id="page_detail_event">
     <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
     <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
     <img class="bloc_center" src="images/<?php echo $detail_evenement->picture;?>">
@@ -46,16 +46,16 @@ include_once('layouts/header.php');?>
     <?php if(empty($participants)){
         echo '<div>Aucun participant actuellement.</div>';
     }else{ ?>
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td>Liste des participants</td>
+                    <td colspan="3">Liste des participants</td>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 foreach($participants as $participant){ ?>
-                    <tr>
+                    <tr class="text_center">
                         <td><?php echo $participant->last_name;?></td>
                         <td><?php echo $participant->first_name;?></td>
                         <td><i onclick="location.href='profil.php?id=<?php echo $participant->id;?>'" class="fas fa-user"></i></td>
@@ -77,7 +77,7 @@ include_once('layouts/header.php');?>
     <?php }
     //Liste de tous les commentaires existants pour cet événement
     foreach($commentaires as $commentaire){ ?>
-        <div class="card mt-5">
+        <div class="card mt-5" id="bloc_liste_commentaires">
             <p>Posté par <?php echo $commentaire->first_name.' '.$commentaire->last_name; ?></p>
             <p>Le : <?php echo $commentaire->date_created;?></p>
             <p><?php echo $commentaire->body;?></p>

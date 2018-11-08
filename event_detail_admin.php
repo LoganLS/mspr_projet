@@ -8,7 +8,7 @@ if($_SESSION['role']!=='administrateur'){
 }
 include_once('php/event_detail_not_published.php');
 include_once('layouts/header.php');?>
-<main class="container">
+<main class="container" id="page_detail_event">
     <h1 class="text_center">Détail de l'événement "<?php echo $detail_evenement->name;?>"</h1>
     <h2 class="text_center">Organisé par <?php echo $createur_evenement->last_name.' '.$createur_evenement->first_name;?></h2>
     <img class="bloc_center" src="images/<?php echo $detail_evenement->picture;?>">

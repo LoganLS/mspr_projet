@@ -12,11 +12,13 @@ include_once('layouts/header.php');?>
     if(empty($events)){
         echo '<div>Aucun événément à valider actuellement.</div>';
     }else{
-        foreach($events as $event){ ?>
-            <div>
-                <a href="event_detail_admin.php?id=<?php echo $event->id;?>"><?php echo $event->name;?></a>
-            </div>
-        <?php } 
+        echo '<ul class="list-group">';
+            foreach($events as $event){ ?>
+                <li class="list-group-item">
+                    <a href="event_detail_admin.php?id=<?php echo $event->id;?>"><?php echo $event->name;?></a>
+                </li>
+            <?php } 
+        echo '</ul>';
     } ?>
 </main>
 <?php include_once('layouts/footer.php');?>
