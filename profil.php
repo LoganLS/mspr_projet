@@ -58,6 +58,25 @@ include("php/db.php");
 <?php } ?>
 </tbody>
 </table>
+
+<?php include_once('php/get_events_created.php') ?>
+
+
+<table class="table table-bordered table-striped">
+
+<tbody>
+    <tr>
+  <td>Événement créés</td>
+</tr>
+
+<?php foreach($events as $event){ ?>
+<tr>
+    <td><a href="event_detail.php?id=<?php echo $event->id;?>"><?php echo $event->name; ?></a></td>
+</tr>
+<?php } ?>
+</tbody>
+</table>
+
 <?php
 if(!empty($_SESSION['id'])){
   if($_SESSION['id'] == $_GET['id']){

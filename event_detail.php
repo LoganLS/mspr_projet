@@ -16,7 +16,7 @@ include_once('layouts/header.php');?>
             <p class="card-body">Rendez-vous à <?php echo $detail_evenement->name_city.', '.$detail_evenement->zip_code.', '.$detail_evenement->street_address.' de '.date('d-m-Y',strtotime($detail_evenement->date_start)).' à '.$detail_evenement->hour_start.' jusqu\'au '.date('d-m-Y',strtotime($detail_evenement->date_end)).' '.$detail_evenement->hour_end;?></p>
             <p class="card-body"><?php echo $detail_evenement->description;?></p>
         </div>
-        
+
         <div class="col-sm-4">
         <?php
         if(!empty($_SESSION['id'])){
@@ -40,7 +40,7 @@ include_once('layouts/header.php');?>
             <?php }
         }?>
         </div>
-        
+
     </div>
     <p>Nombre limité de participants : <?php echo $detail_evenement->limited_number_participant;?></p>
     <?php if(empty($participants)){
@@ -68,7 +68,7 @@ include_once('layouts/header.php');?>
     <?php
     if(!empty($_SESSION['id'])){ ?>
         <form action="php/ajouter_commentaire.php" method="post">
-          
+
            <div class="form-group">
             <textarea class="form-control" name="commentaire" placeholder="Votre commentaire ..."></textarea>
           </div>

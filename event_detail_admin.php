@@ -19,7 +19,7 @@ include_once('layouts/header.php');?>
         </div>
     </div>
     <p>Nombre limité de participants : <?php echo $detail_evenement->limited_number_participant;?></p>
-    <button onclick="location.href='php/publier_evenement.php?id_event=<?php echo $_GET['id'];?>'">Valider l'événement</button>
-    <button onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer l'événement</button>
+    <button class="btn btn-outline-dark" onclick="location.href='php/publier_evenement.php?id_event=<?php echo $_GET['id'];?>'">Valider l'événement</button>
+    <button class="btn btn-outline-dark" onclick="location.href='php/supprimer_evenement.php?id_event=<?php echo $_GET['id'];?>'">Supprimer l'événement</button>
 </main>
 <?php include_once('layouts/footer.php');?>
