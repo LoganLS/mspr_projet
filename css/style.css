@@ -3,14 +3,9 @@
     margin: 0 auto;
 }
 
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #789BFF !important;
-}
-
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #789BFF !important;
+img{
+    display:block;
+    max-width: 100%;
 }
 
 .contenu_page {
@@ -52,6 +47,20 @@ main{
 #bloc_liste_commentaires>p{
     padding:5px;
     margin:5px;
+}
+
+#espace_boutons_validation_events{
+    padding:20px;
+    margin:0 auto;
+}
+
+.text_titre_events_profil,.text_titre_info_profil{
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+.text_titre_info_profil{
+    width:25%;
 }
 
 #h2_accueil{
