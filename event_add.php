@@ -18,51 +18,51 @@
 	<form action="php/event_add.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="event_name">Nom de l'événement</label>
-            <input class="form-control" type="text" name="event_name" id="event_name">
+            <input class="form-control" type="text" name="event_name" id="event_name" required>
         </div>
         <div class="form-group">
             <label for="date_start">Date de début</label>
-            <input class="form-control" type="date" name="date_start" id="date_start">
+            <input class="form-control" type="date" name="date_start" id="date_start" required>
         </div>
         <div class="form-group">
             <label for="hour_start">Heure de début</label>
-            <input class="form-control" type="time" name="hour_start" id="hour_start">
+            <input class="form-control" type="time" name="hour_start" id="hour_start" required>
         </div>
         <div class="form-group">
             <label for="date_end">Date de fin</label>
-            <input class="form-control" type="date" name="date_end" id="date_end">
+            <input class="form-control" type="date" name="date_end" id="date_end" required>
         </div>
         <div class="form-group">
             <label for="hour_end">Heure de fin</label>
-            <input class="form-control" type="time" name="hour_end" id="hour_end">
+            <input class="form-control" type="time" name="hour_end" id="hour_end" required>
         </div>
         <div class="form-group">
             <label for="picture">Photo</label>
-            <input class="form-control" type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png">
+            <input class="form-control" type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" required>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" name="description" id="description"></textarea>
+            <textarea class="form-control" name="description" id="description" required></textarea>
         </div>
         <div class="form-group">
             <label for="limited_number_participants">Nombre limite de participants</label>
-            <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants">
+            <input class="form-control" type="number" name="limited_number_participants" id="limited_number_participants" required>
         </div>
 
         <h2 class="h2">Adresse de l'événement</h2>
 
 				<div class="form-group">
 						<label for="city">Ville</label>
-						<input class="form-control" type="text" name="city" id="city">
+						<input class="form-control" type="text" name="city" id="city" required>
 				</div>
         <div class="form-group">
             <label for="zip_code">Code postal</label>
-            <input class="form-control" type="text" name="zip_code" id="zip_code">
+            <input class="form-control" type="text" name="zip_code" id="zip_code" required>
         </div>
 
         <div class="form-group">
             <label for="street">Rue</label>
-            <input class="form-control" type="text" name="street" id="street">
+            <input class="form-control" type="text" name="street" id="street" required>
         </div>
         <div class="error">
             <?php if(isset($_SESSION['error'])){

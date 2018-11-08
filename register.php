@@ -13,37 +13,37 @@
 
         <div class="form-group">
             <label for="last_name">Nom</label>
-            <input class="form-control" type="text" name="last_name" id="last_name">
+            <input class="form-control" type="text" name="last_name" id="last_name" required>
         </div>
 
        <div class="form-group">
             <label for="first_name">Prénom</label>
-            <input class="form-control" type="text" name="first_name" id="first_name">
+            <input class="form-control" type="text" name="first_name" id="first_name" required>
         </div>
 
         <div class="form-group">
             <label for="date_birthday">Date de naissance</label>
-            <input class="form-control" type="date" name="date_birthday" id="date_birthday">
+            <input class="form-control" type="date" name="date_birthday" id="date_birthday" required>
         </div>
 
         <div class="form-group">
             <label for="username">Pseudo</label>
-            <input class="form-control" type="text" name="username" id="username">
+            <input class="form-control" type="text" name="username" id="username" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input class="form-control" type="email" name="email" id="email">
+            <input class="form-control" type="email" name="email" id="email" required>
         </div>
 
         <div class="form-group">
             <label for="password">Mot de passe</label>
-            <input class="form-control" type="password" name="password" id="password">
+            <input class="form-control" type="password" name="password" id="password" required>
         </div>
 
         <div class="form-group">
             <label for="password_bis">Confirmation du mot de passe</label>
-            <input class="form-control" type="password" name="password_bis" id="password_bis">
+            <input class="form-control" type="password" name="password_bis" id="password_bis" required>
         </div>
 
 

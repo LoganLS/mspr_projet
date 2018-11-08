@@ -7,7 +7,7 @@
           </div>
 
             <div id="texte_footer">
-                Projet MSPR WIS 2 - Logan LE SAUX - Laurine MALLET - Chloé GAUTREAU
+                Projet MSPR WIS 2 - Logan Le Saux - Laurine Mallet - Chloé Gautreau 
             </div>
 
         </footer>

@@ -9,16 +9,16 @@
 <div class="card contenu_page">
 
     <h1 class="h2">Connexion</h1>
-	<form action="php/login.php" method="post">
+	<form action="php/login.php" method="post"onkeypress="">
 
 	     <div class="form-group">
            <label for="email">Adresse mail</label>
-           <input class="form-control" type="mail" name="email" id="email">
+           <input class="form-control" type="mail" name="email" id="email" required>
         </div>
 
         <div class="form-group">
             <label for="password">Mot de passe</label>
-            <input class="form-control" type="password" name="password" id="password">
+            <input class="form-control" type="password" name="password" id="password" required>
         </div>
         <div class="error">
             <?php
