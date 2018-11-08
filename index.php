@@ -37,7 +37,7 @@
         <p>Quisque convallis, ex at pulvinar posuere, mi odio venenatis urna, non semper risus sem eu risus. Aliquam felis ipsum, egestas vel tempus nec, sollicitudin in nisl. Morbi a ullamcorper massa, a varius sem. Fusce pharetra tempus erat, at viverra mi ultrices sit amet. Sed congue non ipsum sit amet dictum. Fusce turpis neque, pretium et massa ut, porta volutpat odio. Sed ut efficitur nisi. Nullam sagittis aliquet eros, quis ullamcorper tellus rutrum et. Cras finibus mauris augue, vel egestas diam euismod sed. Donec eu scelerisque tellus, sed euismod diam. Aliquam vestibulum erat sagittis, placerat lorem ac, mattis nunc.</p>
 
         <div id="element">
-            <img id="image_element" src="elements2.png" alt="element du site">
+            <img id="image_element" src="images/elements2.png" alt="element du site">
         </div>
 
     </div>

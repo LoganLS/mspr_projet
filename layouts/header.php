@@ -10,7 +10,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <ul class="navbar-nav">
                     <div id="gauche">
-                        <img id="image_gauche" src="logo.png" alt="logo du site">
+                        <img id="image_gauche" src="images/logo.png" alt="logo du site">
                     </div>
                     <li><a class="nav-item nav-link" href="./index.php">RythmEvent</a></li>
                     <li><a class="nav-item nav-link" href="./events_list.php">Evénements</a></li>
