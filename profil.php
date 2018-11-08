@@ -16,26 +16,26 @@ include("php/db.php");
     <h1 class="h2">Espace profil</h1>
       <p id="nom_prenom_profil"><?php echo $member->first_name." ".$member->last_name ?></p>
 
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped table_page_profil">
     <tbody>
     <tr>
-      <td>Date de naissance</td>
+      <td class="text_titre_info_profil">Date de naissance</td>
       <td><?php echo date("d-m-Y",strtotime($member->date_birthday)) ?></td>
     </tr>
     <tr>
-      <td>Pseudo</td>
+      <td class="text_titre_info_profil">Pseudo</td>
       <td><?php echo $member->username ?></td>
     </tr>
     <tr>
-      <td>Email</td>
+      <td class="text_titre_info_profil">Email</td>
       <td><?php echo $member->email ?></td>
     </tr>
     <tr>
-      <td>Rôle</td>
+      <td class="text_titre_info_profil">Rôle</td>
       <td><?php echo $member->role ?></td>
     </tr>
     <tr>
-      <td>Date de création du compte</td>
+      <td class="text_titre_info_profil">Date de création du compte</td>
       <td><?php echo date("d-m-Y H:i:s",strtotime($member->date_created)) ?></td>
     </tr>
   </tbody>
@@ -44,11 +44,11 @@ include("php/db.php");
 <?php include_once('php/get_events_participate.php') ?>
 
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table_page_profil">
 
 <tbody>
     <tr>
-  <td>Événement où je participe</td>
+  <td class="text_titre_events_profil">Événement où je participe</td>
 </tr>
 
 <?php foreach($events as $event){ ?>
@@ -62,11 +62,11 @@ include("php/db.php");
 <?php include_once('php/get_events_created.php') ?>
 
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table_page_profil">
 
 <tbody>
     <tr>
-  <td>Événement créés</td>
+  <td class="text_titre_events_profil">Événement créés</td>
 </tr>
 
 <?php foreach($events as $event){ ?>
