@@ -24,10 +24,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
 }
 
 .bloc_images_accueil img{
-    width:50%;
+    width:95%;
     margin:0 auto;
 }
 
