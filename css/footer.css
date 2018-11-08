@@ -1,3 +1,16 @@
+#texte_footer2{
+  padding-left: 60px;
+  font-size:1.0em;
+  color:white;
+
+
+}
+
+#logo_reseaux{
+  margin:0;
+  width: 350px;
+}
+
 #texte_footer{
     text-align: center;
     font-size:1.4em;
