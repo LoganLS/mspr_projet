@@ -5,6 +5,7 @@
         <?php include('layouts/head.php');?>
     </head>
     <body>
+        <?php include_once('./components/debuger.php');?>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <ul class="navbar-nav">
@@ -26,9 +27,7 @@
                         <li><a class="nav-item nav-link" href="./profil.php?id=<?php echo $_SESSION['id'];?>">Profil</a></li>
                         <li><a class="nav-item nav-link" href="./logout.php">Déconnexion</a></li>
                     <?php } ?>
-                    <div id="droite">
-                        <img id="image_droite" src="elementsgraphique.png" alt="elements graphique">
-                    </div>
+                    <li class="nav-item"><a class="nav-link" href="#debuger" data-toggle="collapse" role="button">Debuger</a></li>
                 </ul>
             </nav>
         </header>
