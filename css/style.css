@@ -68,10 +68,12 @@ main{
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-    font-size: 4em;
-  color: #228DFF;
-  font-family: 'Iceland', cursive;
+    font-size: 2em;
+  color: #789BFF;
+  font-family: 'Neon', arial;
     width:auto;
+
+
 }
 
 #h2_accueil:hover {
@@ -79,6 +81,7 @@ main{
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
   -moz-animation: neon2 1.5s ease-in-out infinite alternate;
   animation: neon2 1.5s ease-in-out infinite alternate;
+
 }
 
 @-webkit-keyframes neon2 {

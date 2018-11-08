@@ -9,7 +9,7 @@
     WHERE is_published=1
     AND date_start>=NOW()
     ORDER BY date_start
-    LIMIT 5';
+    LIMIT 6';
 
     $stmt=$conn->prepare($sql);
     $stmt->execute();
@@ -18,6 +18,7 @@
 <?php include_once('layouts/header.php');?>
 <main class="container">
     <h1 id="h1_accueil">EVENEMENTS NANTES</h1>
+    <br>
     <h2 id="h2_accueil">Spectacles, concerts, festivals et sorties</h2>
     <div id="bloc_parent_images_accueil">
         <?php
