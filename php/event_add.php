@@ -37,8 +37,9 @@ if (!empty($_POST['event_name']) and !empty($_POST['date_start']) and !empty($_P
             $_SESSION['error']="La date de fin doit survenir après le début de la date de l'événement ... !";
         }
 
+
         //Requête insertion d'un événement
-        if(!empty($_SESSION['error'])){
+        if(empty($_SESSION['error'])){
             $sql='INSERT INTO events(id_user,name,date_start,hour_start,date_end,hour_end,zip_code,name_city,street_address,description,limited_number_participant,date_created,picture,is_published)
             VALUES(:id_user,:name,:date_start,:hour_start,:date_end,:hour_end,:zip_code,:name_city,:street_address,:description,:limited_number_participant,NOW(),:picture,0)';
             $stmt=$conn->prepare($sql);
