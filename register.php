@@ -53,7 +53,7 @@
             <input class="form-control" type="password" name="password_bis" id="password_bis" required>
         </div>
 
-<!--Si $_SESSION["error"] contient une erreur alors on l'affiche puis on la détruit --> 
+<!--Si $_SESSION["error"] contient une erreur alors on l'affiche puis on la détruit -->
         <div class="error">
             <?php if(isset($_SESSION['error'])){
                 echo $_SESSION['error'];
@@ -68,4 +68,5 @@
 </div>
 	</form>
 </main>
+<!-- On inclue le footer -->
 <?php include_once('layouts/footer.php');?>
