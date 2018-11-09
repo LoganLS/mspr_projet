@@ -60,7 +60,7 @@ include("php/db.php");
       <td class="text_titre_events_profil">Événement où je participe</td>
     </tr>
 
-<!-- foreach -> parcourir toute la table évènement pour afficher de le détails des évènements
+<!-- foreach -> parcourir toute la table évènement pour afficher de le détails des évènements-->
     <?php foreach($events as $event){ ?>
     <tr>
         <td><a href="event_detail.php?id=<?php echo $event->id;?>"><?php echo $event->name; ?></a></td>
