@@ -12,12 +12,14 @@ include("php/db.php");
 
     <h1 class="h2">Espace profil</h1>
     <?php
-      
+
       include_once('php/verification_user_existant.php');
-      
+
+//Si la valeur dans la variable $utilisateurExiste est égale à 1 alors c'est bon
       if($utilisateurExiste===1){
         include_once('php/get_informations_user.php');?>
-      
+
+<!--Afficher les informations de la table member -->
         <p id="nom_prenom_profil"><?php echo $member->first_name." ".$member->last_name ?></p>
 
       <table class="table table-bordered table-striped table_page_profil">
@@ -90,9 +92,9 @@ include("php/db.php");
     <button class="btn btn-outline-dark" onclick="location.href='modifier_profil.php?id=<?php echo $_SESSION['id']; ?>'" type="button">Modifier mon profil</button>
 
     <?php  }
-    } 
+    }
 }else{ ?>
-      <div>Aucun profil ne correspond !</div>      
+      <div>Aucun profil ne correspond !</div>
 <?php } ?>
 
 

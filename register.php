@@ -1,17 +1,24 @@
 <?php
+//On démarre la session
 	session_start();
     $title='Inscription';
     $description='';
 ?>
+<!-- On inclue le header -->
 <?php include_once('layouts/header.php');?>
 <main>
+
 
 <div class="card contenu_page">
 
     <h1 class="h2">Inscription</h1>
+<!-- Formulaire d'inscription -->
+<!-- On redirige vers la page "register.php"-->
 	<form action="php/register.php" method="post">
 
+<!-- "form-group" -> Boostrap -->
         <div class="form-group">
+<!--required = remplir le champs si il est vide -->
             <label for="last_name">Nom</label>
             <input class="form-control" type="text" name="last_name" id="last_name" required>
         </div>
@@ -46,8 +53,7 @@
             <input class="form-control" type="password" name="password_bis" id="password_bis" required>
         </div>
 
-
-
+<!--Si $_SESSION["error"] contient une erreur alors on l'affiche puis on la détruit --> 
         <div class="error">
             <?php if(isset($_SESSION['error'])){
                 echo $_SESSION['error'];
@@ -55,6 +61,7 @@
             }
             ?>
         </div>
+<!--Bouton s'inscrire + "btn btn-outline_dark" bootstrap -->
         <div>
             <button class="btn btn-outline-dark" type="submit">S'inscrire</button>
         </div>
