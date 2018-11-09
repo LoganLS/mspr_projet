@@ -4,9 +4,10 @@
     $description='';
 
     include_once('php/db.php');
+    /* on affiche les prochains evenements par ordre de date et on limite à 6 evenements publié sur la page d'accueil*/
     $sql= 'SELECT id, name, picture
     FROM events
-    WHERE is_published=1
+    WHERE is_published=1 /* on regarde si il y publié ou pas */
     AND date_start>=NOW()
     ORDER BY date_start
     LIMIT 6';
@@ -22,6 +23,7 @@
     <h2 id="h2_accueil">Spectacles, concerts, festivals et sorties</h2>
     <div id="bloc_parent_images_accueil">
         <?php
+        /* foreach -> parcourir la table evenements pour afficher le detail d'un evenement */
         foreach ($evenements as $evenement) { ?>
             <div class="bloc_images_accueil">
                 <img class="rounded" src="images/<?php echo $evenement->picture; ?>" alt="" onclick="location.href='event_detail.php?id=<?php echo $evenement->id; ?>'">
