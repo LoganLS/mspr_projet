@@ -27,7 +27,7 @@
                         <li><a class="nav-item nav-link" href="./profil.php?id=<?php echo $_SESSION['id'];?>">Profil</a></li>
                         <li><a class="nav-item nav-link" href="./logout.php">Déconnexion</a></li>
                     <?php } ?>
-                    <li class="nav-item"><a class="nav-link" href="#debuger" data-toggle="collapse" role="button">Debuger</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#debuger" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="debuger">Debuger</a></li>
                 </ul>
             </nav>
         </header>
