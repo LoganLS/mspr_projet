@@ -25,7 +25,7 @@ include("php/db.php");
 <!--Afficher les informations de la table member -->
         <p id="nom_prenom_profil"><?php echo $member->first_name." ".$member->last_name ?></p>
 
-<!--> Bootstrap création de bordure et "stripe" -->
+<!-- Bootstrap création de bordure et "stripe" -->
       <table class="table table-bordered table-striped table_page_profil">
         <tbody>
         <tr>
@@ -60,7 +60,7 @@ include("php/db.php");
       <td class="text_titre_events_profil">Événement où je participe</td>
     </tr>
 
-<!-- foreach -> parcourir toute la table évènement pour afficher de le détails des évènements 
+<!-- foreach -> parcourir toute la table évènement pour afficher de le détails des évènements
     <?php foreach($events as $event){ ?>
     <tr>
         <td><a href="event_detail.php?id=<?php echo $event->id;?>"><?php echo $event->name; ?></a></td>
